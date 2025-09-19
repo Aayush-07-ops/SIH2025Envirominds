@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rain Water Harvesting - Client Information</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <h1>RAIN WATER HARVESTING</h1>
+        
+        </header>
+
+        <!-- Progress Indicator -->
+        <div class="progress-container">
+            <div class="progress-bar">
+                <div class="progress-step active" data-step="1">
+                    <i class="fas fa-user"></i>
+                    <span>Personal Info</span>
+                </div>
+                <div class="progress-step" data-step="2">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>Land Details</span>
+                </div>
+                <div class="progress-step" data-step="3">
+                    <i class="fas fa-chart-line"></i>
+                    <span>Recommendations</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Page 1: Client Information -->
+            <div id="page1" class="page active">
+                <div class="client-info-container">
+                    <h2>CLIENT INFORMATION</h2>
+                    
+                    <form id="clientForm" class="client-form">
+                        <div class="form-group">
+                            <label for="name">NAME</label>
+                            <input type="text" id="name" name="name" placeholder="Enter name" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="phone">PHONE</label>
+                            <input type="tel" id="phone" name="phone" placeholder="Enter phone" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">EMAIL</label>
+                            <input type="email" id="email" name="email" placeholder="Enter email" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="address">ADDRESS</label>
+                            <textarea id="address" name="address" placeholder="Address" required></textarea>
+                        </div>
+
+                        <div class="terms-group">
+                            <label class="terms-title">Terms & Conditions</label>
+                            <div class="checkbox-container">
+                                <input type="checkbox" id="terms" name="terms" required>
+                                <label for="terms" class="terms-label">I agree to all the terms and conditions</label>
+                            </div>
+                        </div>
+
+                        <button type="submit" class="submit-btn">submit</button>
+                    </form>
+
+                    <div class="contact-info">
+                        <a href="#" class="contact-link">contact info.</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Page 2: Water Recharge Assessment -->
+            <div id="page2" class="page">
+                <div class="assessment-header">
+                    <h2>WATER RECHARGE</h2>
+                    <p class="subtitle">on-spot assessment of rooftop rainwater harvesting & recharge potential</p>
+                    
+                    <div class="language-selector">
+                        <select id="language">
+                            <option value="English">English</option>
+                            <option value="Hindi">Hindi</option>
+                            <option value="Spanish">Español</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <div class="assessment-container">
+                    <div class="assessment-form">
+                        <div class="form-section">
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="rootArea">Root Area</label>
+                                    <div class="input-with-unit">
+                                        <input type="number" id="rootArea" name="rootArea" placeholder="500" required>
+                                        <span class="unit">sq m</span>
+                                    </div>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="location">Location</label>
+                                    <div class="location-input">
+                                        <input type="text" id="location" name="location" placeholder="Enter location.." required>
+                                        <button type="button" id="locationBtn" class="location-btn">
+                                            <i class="fas fa-map-marker-alt"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="openSpace">Open Space</label>
+                                    <div class="input-with-unit">
+                                        <input type="number" id="openSpace" name="openSpace" placeholder="800" required>
+                                        <span class="unit">sq m</span>
+                                    </div>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="locationMethod">location</label>
+                                    <div class="location-method">
+                                        <button type="button" id="gpsBtn" class="method-btn active">
+                                            <i class="fas fa-satellite"></i> GPS
+                                        </button>
+                                        <button type="button" id="pinBtn" class="method-btn">
+                                            <i class="fas fa-map-pin"></i> pin
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="solutions-panel">
+                        <div class="solutions-header">
+                            <div class="solutions-icon">
+                                <i class="fas fa-home"></i>
+                                <i class="fas fa-tint"></i>
+                            </div>
+                            <h3>Solutions</h3>
+                        </div>
+                        
+                        <div class="solutions-grid">
+                            <div class="solution-item">
+                                <div class="solution-icon">
+                                    <i class="fas fa-chart-line"></i>
+                                </div>
+                                <span>Rainfall Data Integration</span>
+                            </div>
+                            
+                            <div class="solution-item">
+                                <div class="solution-icon">
+                                    <i class="fas fa-home"></i>
+                                </div>
+                                <span>Rooftop Area Assessment</span>
+                            </div>
+                            
+                            <div class="solution-item">
+                                <div class="solution-icon">
+                                    <i class="fas fa-calculator"></i>
+                                </div>
+                                <span>Recharge Potential Calculator</span>
+                            </div>
+                            
+                            <div class="solution-item">
+                                <div class="solution-icon">
+                                    <i class="fas fa-leaf"></i>
+                                </div>
+                                <span>Eco-friendly & Sustainable</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <form id="landForm" class="hidden-form">
+                    <input type="hidden" id="latitude" name="latitude">
+                    <input type="hidden" id="longitude" name="longitude">
+                    <input type="hidden" id="soilType" name="soilType" value="mixed">
+                    <input type="hidden" id="waterTable" name="waterTable" value="medium">
+                    <input type="hidden" id="slope" name="slope" value="flat">
+                    <input type="hidden" id="existingStructures" name="existingStructures" value="none">
+                </form>
+                
+                <div class="form-actions">
+                    <button type="button" class="btn btn-secondary" onclick="goToPage(1)">
+                        <i class="fas fa-arrow-left"></i> Back
+                    </button>
+                    <button type="button" id="analyzeBtn" class="btn btn-primary">
+                        Analyze Water Harvesting Potential <i class="fas fa-chart-line"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Page 3: Recommendations and Results -->
+            <div id="page3" class="page">
+                <div class="page-header">
+                    <h2><i class="fas fa-chart-line"></i> Water Harvesting Recommendations</h2>
+                    <p>Based on your location and land details, here are our recommendations</p>
+                </div>
+                
+                <div id="loading" class="loading">
+                    <i class="fas fa-spinner fa-spin"></i>
+                    <p>Analyzing your data and fetching weather information...</p>
+                </div>
+                
+                <div id="results" class="results-container" style="display: none;">
+                    <div class="results-grid">
+                        <div class="result-card weather-card">
+                            <h3><i class="fas fa-cloud-rain"></i> Rainfall Analysis</h3>
+                            <div id="weatherData"></div>
+                        </div>
+                        
+                        <div class="result-card recommendation-card">
+                            <h3><i class="fas fa-lightbulb"></i> Recommended Solution</h3>
+                            <div id="recommendationData"></div>
+                        </div>
+                        
+                        <div class="result-card storage-card">
+                            <h3><i class="fas fa-database"></i> Storage Capacity</h3>
+                            <div id="storageData"></div>
+                        </div>
+                        
+                        <div class="result-card cost-card">
+                            <h3><i class="fas fa-calculator"></i> Cost Analysis</h3>
+                            <div id="costData"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="form-actions">
+                        <button type="button" class="btn btn-secondary" onclick="goToPage(2)">
+                            <i class="fas fa-arrow-left"></i> Modify Details
+                        </button>
+                        <button type="button" class="btn btn-primary" onclick="downloadReport()">
+                            <i class="fas fa-download"></i> Download Report
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rain Water Harvesting - Client Information</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <h1>RAIN WATER HARVESTING</h1>
+            <p class="tagline">on-spot assessment of rooftop rainwater harvesting & recharge potential</p>
+        </header>
+
+        <!-- Progress Indicator -->
+        <div class="progress-container">
+            <div class="progress-bar">
+                <div class="progress-step active" data-step="1">
+                    <i class="fas fa-user"></i>
+                    <span>Personal Info</span>
+                </div>
+                <div class="progress-step" data-step="2">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>Land Details</span>
+                </div>
+                <div class="progress-step" data-step="3">
+                    <i class="fas fa-chart-line"></i>
+                    <span>Recommendations</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Page 1: Client Information -->
+            <div id="page1" class="page active">
+                <div class="client-info-container">
+                    <h2>CLIENT INFORMATION</h2>
+                    
+                    <form id="clientForm" class="client-form">
+                        <div class="form-group">
+                            <label for="name">NAME</label>
+                            <input type="text" id="name" name="name" placeholder="Enter name" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="phone">PHONE</label>
+                            <input type="tel" id="phone" name="phone" placeholder="Enter phone" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">EMAIL</label>
+                            <input type="email" id="email" name="email" placeholder="Enter email" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="address">ADDRESS</label>
+                            <textarea id="address" name="address" placeholder="Address" required></textarea>
+                        </div>
+
+                        <div class="terms-group">
+                            <label class="terms-title">Terms & Conditions</label>
+                            <div class="checkbox-container">
+                                <input type="checkbox" id="terms" name="terms" required>
+                                <label for="terms" class="terms-label">I agree to all the terms and conditions</label>
+                            </div>
+                        </div>
+
+                        <button type="submit" class="submit-btn">submit</button>
+                    </form>
+
+                    <div class="contact-info">
+                        <a href="#" class="contact-link">contact info.</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Page 2: Water Recharge Assessment -->
+            <div id="page2" class="page">
+                <div class="assessment-header">
+                    <h2>WATER RECHARGE</h2>
+                    <p class="subtitle">on-spot assessment of rooftop rainwater harvesting & recharge potential</p>
+                    
+                    <div class="language-selector">
+                        <select id="language">
+                            <option value="English">English</option>
+                            <option value="Hindi">Hindi</option>
+                            <option value="Spanish">Español</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <div class="assessment-container">
+                    <div class="assessment-form">
+                        <div class="form-section">
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="rootArea">Root Area</label>
+                                    <div class="input-with-unit">
+                                        <input type="number" id="rootArea" name="rootArea" placeholder="500" required>
+                                        <span class="unit">sq m</span>
+                                    </div>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="location">Location</label>
+                                    <div class="location-input">
+                                        <input type="text" id="location" name="location" placeholder="Enter location.." required>
+                                        <button type="button" id="locationBtn" class="location-btn">
+                                            <i class="fas fa-map-marker-alt"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="openSpace">Open Space</label>
+                                    <div class="input-with-unit">
+                                        <input type="number" id="openSpace" name="openSpace" placeholder="800" required>
+                                        <span class="unit">sq m</span>
+                                    </div>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="locationMethod">location</label>
+                                    <div class="location-method">
+                                        <button type="button" id="gpsBtn" class="method-btn active">
+                                            <i class="fas fa-satellite"></i> GPS
+                                        </button>
+                                        <button type="button" id="pinBtn" class="method-btn">
+                                            <i class="fas fa-map-pin"></i> pin
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="solutions-panel">
+                        <div class="solutions-header">
+                            <div class="solutions-icon">
+                                <i class="fas fa-home"></i>
+                                <i class="fas fa-tint"></i>
+                            </div>
+                            <h3>Solutions</h3>
+                        </div>
+                        
+                        <div class="solutions-grid">
+                            <div class="solution-item">
+                                <div class="solution-icon">
+                                    <i class="fas fa-chart-line"></i>
+                                </div>
+                                <span>Rainfall Data Integration</span>
+                            </div>
+                            
+                            <div class="solution-item">
+                                <div class="solution-icon">
+                                    <i class="fas fa-home"></i>
+                                </div>
+                                <span>Rooftop Area Assessment</span>
+                            </div>
+                            
+                            <div class="solution-item">
+                                <div class="solution-icon">
+                                    <i class="fas fa-calculator"></i>
+                                </div>
+                                <span>Recharge Potential Calculator</span>
+                            </div>
+                            
+                            <div class="solution-item">
+                                <div class="solution-icon">
+                                    <i class="fas fa-leaf"></i>
+                                </div>
+                                <span>Eco-friendly & Sustainable</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <form id="landForm" class="hidden-form">
+                    <input type="hidden" id="latitude" name="latitude">
+                    <input type="hidden" id="longitude" name="longitude">
+                    <input type="hidden" id="soilType" name="soilType" value="mixed">
+                    <input type="hidden" id="waterTable" name="waterTable" value="medium">
+                    <input type="hidden" id="slope" name="slope" value="flat">
+                    <input type="hidden" id="existingStructures" name="existingStructures" value="none">
+                </form>
+                
+                <div class="form-actions">
+                    <button type="button" class="btn btn-secondary" onclick="goToPage(1)">
+                        <i class="fas fa-arrow-left"></i> Back
+                    </button>
+                    <button type="button" id="analyzeBtn" class="btn btn-primary">
+                        Analyze Water Harvesting Potential <i class="fas fa-chart-line"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Page 3: Recommendations and Results -->
+            <div id="page3" class="page">
+                <div class="page-header">
+                    <h2><i class="fas fa-chart-line"></i> Water Harvesting Recommendations</h2>
+                    <p>Based on your location and land details, here are our recommendations</p>
+                </div>
+                
+                <div id="loading" class="loading">
+                    <i class="fas fa-spinner fa-spin"></i>
+                    <p>Analyzing your data and fetching weather information...</p>
+                </div>
+                
+                <div id="results" class="results-container" style="display: none;">
+                    <div class="results-grid">
+                        <div class="result-card weather-card">
+                            <h3><i class="fas fa-cloud-rain"></i> Rainfall Analysis</h3>
+                            <div id="weatherData"></div>
+                        </div>
+                        
+                        <div class="result-card recommendation-card">
+                            <h3><i class="fas fa-lightbulb"></i> Recommended Solution</h3>
+                            <div id="recommendationData"></div>
+                        </div>
+                        
+                        <div class="result-card storage-card">
+                            <h3><i class="fas fa-database"></i> Storage Capacity</h3>
+                            <div id="storageData"></div>
+                        </div>
+                        
+                        <div class="result-card cost-card">
+                            <h3><i class="fas fa-calculator"></i> Cost Analysis</h3>
+                            <div id="costData"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="form-actions">
+                        <button type="button" class="btn btn-secondary" onclick="goToPage(2)">
+                            <i class="fas fa-arrow-left"></i> Modify Details
+                        </button>
+                        <button type="button" class="btn btn-primary" onclick="downloadReport()">
+                            <i class="fas fa-download"></i> Download Report
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
